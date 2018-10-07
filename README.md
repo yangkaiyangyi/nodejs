@@ -42,5 +42,5 @@ app.get('/', function (req, res) {
 connection.end();
 
 app.listen(4000, function () {//监听3000端口
-    console.log('监听3000端口')
+    console.log('监听4000端口')
 })
