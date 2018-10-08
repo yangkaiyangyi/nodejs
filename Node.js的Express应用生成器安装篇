@@ -1,0 +1,28 @@
+前提需要装Node.js。
+Express是基于 Node.js 平台，快速、开放、极简的 web 开发框架。
+
+Express应用生成器所创建的应用框架包含多个JavaScript文件、Jade模板和针对不同用途的子目录等。所以注意Express与Express应用生成器的区别。
+
+1、安装Express应用生成器。不需要考虑进到哪个目录下，因为是全局安装，所以会自动添加到你安装node.js的node_modules模块下。
+cnpm install express-generator -g
+
+2、生成Express项目。myapp为你项目的名称，-e为ejs模板，默认是jade模板。这里需要考虑你的目录了，进到你需要实际安装的目录上一级，因为它会自动往下建一级。
+express myapp -e
+
+3、这个时候你的Express应用生成器已经为你生成了一个框架了。然后安装所有依赖包。首先你得进入你的项目根目录。
+cd myapp
+cnpm install
+
+解释一下，因为第二步的时候你的框架已经生成好了，你可以打开package.json看到你的依赖包。dependencies下的都是各个依赖包以及版本号。所以npm可以通过命令cnpm install安装你指定的依赖包。
+
+4、启动你的项目。
+cnpm start
+
+5、访问localhost:3000地址。
+你可以看到welcome to Express，证明你已经成功了。
+
+其他
+npm uninstall xxx (-g) 卸载模块
+npm cache clean 清理缓存
+Express应用生成器介绍：http://www.expressjs.com.cn/starter/generator.html
+cnpm是什么鬼东西：http://www.ydcss.com/archives/18#lesson4
